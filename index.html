@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #1e1e2f;
+      color: white;
+    }
+
+    .container {
+      background: #2d2d4d;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: inline-block;
+    }
+
+    .download-btn {
+      background: #4caf50;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Download Awesome Game</h1>
+    <p>Click the button below to download the game.</p>
+    <button class="download-btn" onclick="downloadGame()">Download Game</button>
+  </div>
+
+  <script>
+    function downloadGame() {
+      // Replace the link below with your real game file URL (must be a direct link)
+      const gameUrl = "https://example.com/files/awesome-game.zip";
+      const link = document.createElement('a');
+      link.href = gameUrl;
+      link.download = "awesome-game.zip"; // This name can be changed
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+</body>
+</html>
